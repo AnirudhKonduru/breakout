@@ -1,21 +1,23 @@
+#pragma once
 #include"rect.hpp"
-#include"consts.h"
 
 class Brick:public Rect{
 public:
-  Brick(int row, int col){
-    x = BRICK_GAP+col*(BRICK_WIDTH+BRICK_GAP)-1;
-    y =  2*BRICK_GAP+row*(BRICK_HEIGHT+BRICK_GAP);
-    vx=0;
-    vy=0;
-    height = BRICK_HEIGHT;
-    width = BRICK_WIDTH;
-    color = colors[row];
-    solid=true;
-  }
+  int row;
+  int col;
+  COLOR colors[7] = {
+      hex2glcolor(HEX_RED),
+      hex2glcolor(HEX_PURPLE),
+    	hex2glcolor(HEX_INDIGO),
+    	hex2glcolor(HEX_BLUE),
+    	hex2glcolor(HEX_TEAL),
+    	hex2glcolor(HEX_LIME),
+      hex2glcolor(HEX_AMBER),
+  };
 
-  void onCollision(){
-    solid=false;
-  }
+
+  Brick(int row_n, int col_n);
+
+  void onCollision();
 
 };

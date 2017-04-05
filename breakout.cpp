@@ -7,7 +7,7 @@ using namespace std;
 
 #include"gameObjects.hpp"
 
-GameObjects game_objs;
+gameObjects game_objs;
 
 void display();
 

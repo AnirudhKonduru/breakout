@@ -37,20 +37,10 @@ public:
   //}
 }COLOR;
 
-COLOR hex2glcolor(int hex){
+COLOR inline hex2glcolor(int hex){
   float r = ((hex >> 16) & 0xFF) / 255.0;
   float g = ((hex >> 8) & 0xFF) / 255.0;
   float b = ((hex) & 0xFF) / 255.0;
   COLOR col = {r,g,b};
   return col;
 }
-
-COLOR colors[] = {
-    hex2glcolor(HEX_RED),
-    hex2glcolor(HEX_PURPLE),
-  	hex2glcolor(HEX_INDIGO),
-  	hex2glcolor(HEX_BLUE),
-  	hex2glcolor(HEX_TEAL),
-  	hex2glcolor(HEX_LIME),
-    hex2glcolor(HEX_AMBER),
-};
