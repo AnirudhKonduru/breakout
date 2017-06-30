@@ -1,5 +1,6 @@
 #include<iostream>
 #include<stdio.h>
+#include<unistd.h>
 using namespace std;
 
 #include<GL/glut.h>
@@ -77,6 +78,7 @@ int main(int argc, char * argv[]){
 }
 
 void display(){
+  usleep(10000);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
   //draw here
